@@ -3,11 +3,11 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('../schema/schema');
 
 const app = express();
-const PORT = 3004;
+const PORT = 3002;
 
 app.use('/graphql', graphqlHTTP({
   schema,
-  graphiql: true
+  graphiql: true,
 }));
 
 app.listen(PORT, err => {
